@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webfix Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@700&family=Inter:wght@700&family=Nunito:wght@600;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Webfix</h2>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="viewsite.html" target="_blank">View Site</a></li>
+                    <li>
+                        <a href="#posts">Posts</a>
+                        <ul class="submenu">
+                            <li><a href="#drafts">Drafts</a></li>
+                            <li><a href="#schedule">Schedule</a></li>
+                            <li><a href="#published">Published</a></li>
+                            <li><a href="#newsletter">Newsletter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="#tags">Tags</a></li>
+                    <li><a href="#members">Members</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li>
+                        <a href="#templates">Templates</a>
+                        <ul class="submenu">
+                            <li><a href="#template1">Blog Template</a></li>
+                            <li><a href="#template2">Newsletter Template</a></li>
+                            <li><a href="#template3">Landing Page Template</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard Analytics</h1>
+                <p>Website record analysis: membership, offers, and user activity overview.</p>
+            </header>
+            <section id="view-site-examples" style="display:none; margin-bottom: 32px;">
+                <h2>Website Front Page Examples</h2>
+                <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+                    <div style="flex: 1 1 220px; max-width: 300px;">
+                        <img src="https://assets-global.website-files.com/5d9bc5d562ffc2869b474aef/63e3e2e2b2b2b2b2b2b2b2b2_website-design-example-1.jpg" alt="Modern Blog Example" style="width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <p style="text-align:center; margin-top:8px;">Modern Blog</p>
+                    </div>
+                    <div style="flex: 1 1 220px; max-width: 300px;">
+                        <img src="https://assets.awwwards.com/awards/images/2023/07/website-design-inspiration-portfolio.jpg" alt="Portfolio Example" style="width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <p style="text-align:center; margin-top:8px;">Portfolio</p>
+                    </div>
+                    <div style="flex: 1 1 220px; max-width: 300px;">
+                        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/colorlib-website-example.jpg" alt="Business Landing Page Example" style="width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <p style="text-align:center; margin-top:8px;">Business Landing Page</p>
+                    </div>
+                </div>
+                <p style="margin-top:16px; color:#888; font-size:0.95em;">These are sample front pages created with our software. Get inspired for your own site!</p>
+
+                <h3 style="margin-top:40px;">Direct Website Templates (Edit & Use)</h3>
+                <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+                    <div style="flex: 1 1 220px; max-width: 300px;">
+                        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/colorlib-simple-personal-website-template.jpg" alt="Simple Personal Website Template" style="width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <p style="text-align:center; margin-top:8px;">Simple Personal Website</p>
+                        <a href="https://colorlib.com/preview/theme/personal/" target="_blank" style="display:block;text-align:center;margin-top:6px;color:#00bfae;font-weight:600;">Edit & Use</a>
+                    </div>
+                    <div style="flex: 1 1 220px; max-width: 300px;">
+                        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/colorlib-resume-website-template.jpg" alt="Resume Website Template" style="width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <p style="text-align:center; margin-top:8px;">Resume Website</p>
+                        <a href="https://colorlib.com/preview/theme/resume/" target="_blank" style="display:block;text-align:center;margin-top:6px;color:#00bfae;font-weight:600;">Edit & Use</a>
+                    </div>
+                    <div style="flex: 1 1 220px; max-width: 300px;">
+                        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/colorlib-app-landing-page-template.jpg" alt="App Landing Page Template" style="width:100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <p style="text-align:center; margin-top:8px;">App Landing Page</p>
+                        <a href="https://colorlib.com/preview/theme/appco/" target="_blank" style="display:block;text-align:center;margin-top:6px;color:#00bfae;font-weight:600;">Edit & Use</a>
+                    </div>
+                </div>
+                <p style="margin-top:16px; color:#888; font-size:0.95em;">Choose a template, edit your name and contact info, and launch your site instantly!</p>
+            </section>
+            <section class="dashboard-analytics">
+                <div class="dashboard-charts">
+                    <div class="chart-container">
+                        <h2>Membership Types</h2>
+                        <canvas id="membershipPie"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h2>Offers Distribution</h2>
+                        <canvas id="offersBar"></canvas>
+                    </div>
+                </div>
+                <div class="dashboard-table">
+                    <h2>Recent Members</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Name</th><th>Membership</th><th>Offer</th></tr>
+                        </thead>
+                        <tbody id="membersTableBody">
+                            <!-- Filled by JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="dashboard-summary">
+                    <h2>Summary</h2>
+                    <ul id="dashboardSummary">
+                        <!-- Filled by JS -->
+                    </ul>
+                </div>
+            </section>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="js/dashboard.js"></script>
+        </main>
+    </div>
+</body>
+</html> 

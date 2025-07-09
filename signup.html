@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webfix - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, .form-container, .form-container * {
+            font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="justify-content:center;align-items:center;min-height:100vh;">
+        <div class="form-container" id="signup-form" style="margin:auto;max-width:400px;">
+            <h2>Sign Up</h2>
+            <form action="../src/php/register.php" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p style="margin-top:18px;text-align:center;color:#b0b8c1;">Already have an account? <a href="signin.html" style="color:#00bfae;">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html> 
